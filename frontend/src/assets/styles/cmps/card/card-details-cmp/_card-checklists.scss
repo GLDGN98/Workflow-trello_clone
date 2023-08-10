@@ -1,0 +1,137 @@
+.card-checklists {
+  h3 {
+    font-size: $card-details-header;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    gap: 0.7em;
+    font-size: 14px;
+    font-family: OpenSans-Regular;
+
+    svg {
+      font-size: 21px;
+    }
+  }
+
+  .checklist-title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .delete-checklist-btn {
+    margin: 0 0 0.6em;
+  }
+
+  .checklist {
+    padding: 0;
+    margin: 2.5em 0;
+
+    .add-checklist-todo-btn {
+      padding: 6px 12px;
+      height: 32px;
+      background-color: #091e420a;
+      margin-top: 8px;
+      text-align: start;
+      margin-left: 1.95em;
+      color: #172b4d;
+
+      &:hover {
+        background-color: #091e4214;
+      }
+    }
+
+    .todo-btns {
+      padding-left: 2em;
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+      margin-top: 0.5em;
+    }
+
+    .blue-button {
+      margin: 0;
+      height: 32px;
+      padding: 6px 16px
+    }
+
+    .grey-button {
+      margin: 0;
+    }
+
+    .todo-input {
+      margin-left: 2.7em;
+      margin-top: 0.5em;
+    }
+
+    .done-todo {
+      text-decoration: line-through;
+    }
+
+    .todo-label {
+      font-size: 14px;
+    }
+
+    .checklist-todo {
+      list-style: none;
+      margin-bottom: 0.4em;
+
+      &:hover {
+        background-color: lighten(#091e4214, 65);
+      }
+
+      label {
+        padding-left: 1rem;
+        cursor: pointer;
+      }
+
+      .todo-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 29px;
+      }
+
+      .delete-todo-btn {
+        height: auto;
+        margin: 0;
+      }
+    }
+
+    .container-prec {
+      display: flex;
+      align-items: center;
+      padding-bottom: 0.5em;
+    }
+
+    span {
+      font-size: 11px;
+      margin-right: 1em;
+      margin-left: 0.2em;
+    }
+
+    .progress-bar-container {
+      height: 8px;
+      background-color: #ccc;
+      position: relative;
+      border-radius: 2em;
+      width: 100%;
+
+      .progress-bar {
+        border-radius: 2em;
+        position: absolute;
+        height: 100%;
+        transition: progress-animation 0.3s, width 0.15s;
+      }
+    }
+  }
+
+  @keyframes progress-animation {
+    0% {
+      width: 0%;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+}

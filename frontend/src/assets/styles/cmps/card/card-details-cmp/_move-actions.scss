@@ -1,0 +1,87 @@
+.move-action {
+    padding: 1em;
+
+    .move-action-container {
+        display: flex;
+        padding: 1em;
+        position: relative;
+        justify-content: space-between;
+        gap: 6em;
+
+        .select-card-input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            &:hover {
+                background-color: #091e4214;
+            }
+        }
+
+        .select-group-input {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+
+            &:hover {
+                background-color: #091e4214;
+            }
+        }
+
+
+    }
+
+    .blue-button {
+        padding: 6px 18px;
+    }
+
+    label {
+        color: var(--ds-text-subtle, #5e6c84);
+        display: block;
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 0;
+    }
+
+    .move-card-btn {
+        margin-left: 1em;
+    }
+
+    .select-group-input,
+    .sdelect-card-input {
+        background-color: #091e420a;
+    }
+
+    .move-action-title {
+        text-align: center;
+        font-family: OpenSans-Regular;
+    }
+
+    .selected-group-action {
+        border: none;
+        cursor: pointer;
+        height: 30px;
+        left: 0;
+        margin: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+    }
+
+    .selected-card-action {
+        border: none;
+        cursor: pointer;
+        height: 30px;
+        /* left: 0; */
+        margin: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        /* width: 100%; */
+        z-index: 2;
+    }
+
+}

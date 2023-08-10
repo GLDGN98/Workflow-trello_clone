@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+.group-list {
+  position: relative;
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+  padding: 0em 0.5em 0 8px;
+  height: 100%;
+  overflow-y: hidden;
+  flex: 1;
+
+  .dnd-container {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+
+    .scroll-container {
+      overflow-y: overlay;
+      overflow-y: auto;
+      overflow: visible;
+
+    }
+
+    .group {
+      width: rem(273px);
+      position: relative;
+      max-height: 98%;
+      display: flex;
+      flex-direction: column;
+      border-radius: $edge-round;
+      overflow: visible;
+
+      .group-actions-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0.2rem;
+        right: 0.2rem;
+        color: #6b778c;
+        width: 2.1875em;
+        height: 2.1875em;
+        background-color: transparent;
+        border-radius: 3px;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #091e4214;
+          color: $clr7;
+        }
+      }
+    }
+  }
+}
+
+.add-group-container {
+  position: relative;
+
+  .add-group-section {
+    display: flex;
+  }
+
+  .group-title-input {
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: $clr19;
+    min-width: 285px;
+    max-width: 285px;
+    min-height: 36px;
+    box-shadow: 0 1px 0 rgb(9 30 66 / 25%);
+    border-radius: 0.2em;
+    background-color: #fff;
+    box-shadow: inset 0 0 0 2px var(--ds-border-focused, #0079bf);
+    font-family: "Open Sans", sans-serif;
+    padding-left: 0.4em;
+
+    &::placeholder {
+      font-family: "Open Sans", sans-serif;
+      font-size: rem(15px);
+    }
+  }
+
+  .close-group-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(26px);
+    color: #6b778c;
+    background: inherit;
+    margin-top: 4px;
+
+    &:hover {
+      color: $clr7;
+    }
+  }
+
+  .add-new-group-btn {
+    background-color: var(--ds-background-brand-bold, #0079bf);
+    border: none;
+    box-shadow: none;
+    color: var(--ds-text-inverse, #fff);
+    padding: 8px 16px;
+    margin: 4px 4px 0 0;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 0.2em;
+
+    &:hover {
+      background-color: $clr4;
+    }
+  }
+}
+
+.add-group-list-btn {
+  .add-group-title-icon {
+    margin-left: 0.5em;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .add-group-title-text {
+    margin-left: 0.3em;
+  }
+}
+
+.add-group-btn {
+  height: 2.5rem;
+  width: 17rem;
+  border-radius: $edge-round;
+  text-align: start;
+  background-color: $clr18;
+  min-width: fit-content;
+  transition: background-color cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: opacify($clr18, 0.1);
+  }
+}
+
+.group-preview {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.2em;
+  padding: 0.6em 0.5em 0.5em 0.5em;
+  font-size: 14px;
+  background-color: #ebecf0;
+  box-shadow: 0 1px 0 rgb(9 30 66 / 25%);
+  min-width: 17rem;
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
+  overflow: hidden;
+
+
+  .group-title-input {
+    height: 30px;
+    width: 90%;
+  }
+
+  h4 {
+    color: #253e68;
+    font-family: "Open Sans", sans-serif;
+    padding: 0em 0 0.6em 0.5em;
+    margin: 0;
+    line-height: normal;
+  }
+}

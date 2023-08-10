@@ -1,0 +1,88 @@
+.group-actions-modal {
+    position: absolute;
+    width: 300px;
+    z-index: 4;
+    left: 88%;
+    top: 40px;
+    font-size: 0.875rem;
+    line-height: $modal-line-height;
+    color: $clr7;
+    box-shadow: 0 8px 16px -4px rgba(9, 30, 66, 0.25),
+        0 0 0 1px rgba(9, 30, 66, 0.08);
+    box-sizing: border-box;
+    outline: 0;
+    overflow: hidden;
+    border-radius: 3px;
+    background-color: $clr6;
+    cursor: default;
+
+    .group-actions-header {
+        margin-bottom: 8px;
+        padding: 0 12px;
+        position: relative;
+        text-align: center;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 12px 1fr 12px;
+    }
+
+    i {
+        grid-column: 3;
+        grid-row: 1;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        z-index: 2;
+        outline: none;
+    }
+
+    h4 {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+        border-bottom: 1px solid rgba(9, 30, 66, 0.13);
+        color: $clr15;
+        height: 40px;
+        display: block;
+        line-height: 40px;
+        margin: 0;
+        overflow: hidden;
+        padding: 0 32px;
+        position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .group-actions {
+        list-style: none;
+        margin: 0;
+        padding: 0 12px 12px;
+
+        li {
+            color: $clr7;
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
+            margin: 0 -12px;
+            padding: 6px 12px;
+            &:hover {
+                background-color: #091e4214;
+            }
+
+            hr{
+                margin: 8px 0px;
+            }
+          
+        }
+
+        
+    }
+
+    
+
+
+
+
+
+}

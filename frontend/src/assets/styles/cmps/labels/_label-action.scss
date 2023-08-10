@@ -1,0 +1,107 @@
+.label-edit-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // padding: 50px;
+  input {
+    margin-left: 12px;
+    cursor: pointer;
+  }
+
+  .color-label-container {
+    position: relative;
+
+    .circle {
+      position: absolute;
+      left: 0.5em;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      background-color: aliceblue;
+    }
+  }
+
+  div {
+    margin-left: 13px;
+    height: 100%;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      background-color: transparent;
+      font-size: 11px;
+      margin-right: 7px;
+      color: black;
+    }
+
+    label {
+      height: 90%;
+      display: flex;
+      align-items: center;
+      width: 84%;
+      /* text-align: left; */
+      justify-content: flex-start;
+      padding-left: 30px;
+      border-radius: 0.2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.add-label {
+  width: 100%;
+  text-align: center;
+}
+
+.label-editor {
+  .twitter-picker {
+    margin-top: 12px;
+    margin-left: 0.5em;
+  }
+
+  .label-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5em 0.5em 0 0.5em;
+  }
+
+
+  .blue-button {
+    background-color: #0079bf;
+    border: none;
+    box-shadow: none;
+    color: var(--ds-text-inverse, #fff);
+    padding: 6px 12px;
+    min-height: 32px;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 0.2em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+  }
+
+  .grey-button {
+    cursor: pointer;
+    padding: 6px 12px;
+    height: 32px;
+    background-color: rgba(9, 30, 66, 0.0392156863);
+    text-align: start;
+    color: #172b4d;
+  }
+
+  button {
+    margin: 0;
+  }
+}
+
+.labels-action-header {
+  p {
+    margin-bottom: 0;
+  }
+}

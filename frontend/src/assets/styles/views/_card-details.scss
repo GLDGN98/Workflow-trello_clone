@@ -1,0 +1,533 @@
+.card-details {
+  font-family: OpenSans-Regular;
+  position: relative;
+
+  .close-card-detail {
+    border-radius: 50%;
+    color: var(--ds-icon, #42526e);
+    height: 32px;
+    margin: 4px;
+    overflow: hidden;
+    padding: 4px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: background-color 85ms, color 85ms;
+    width: 32px;
+    background-color: transparent;
+    font-size: 1.3rem;
+
+
+    i {
+      color: black;
+      line-height: 1.5;
+    }
+
+    &:hover {
+      background: #00000012;
+      border-radius: 50%;
+
+    }
+
+  }
+
+  header {
+    height: rem(115px);
+    min-height: rem(115px);
+    grid-area: header;
+  }
+
+  display: grid;
+  grid-template-columns: 30px 2.5fr 0.8fr;
+  grid-template-rows: 0.3fr 3fr;
+  // grid-template-areas:
+  //   "header header header"
+  //   "content content side-bar";
+  width: 100%;
+  max-width: rem(768px);
+  min-height: 87.5vh;
+  background-color: #ebecf0;
+  margin: 50px auto;
+  color: $clr7;
+  border-radius: 3px;
+
+  .labels-action-header {
+    text-align: center;
+    margin-top: 0.2em;
+  }
+
+  .card-details-labels-title {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: OpenSans-Regular;
+    color: #5e6c84;
+
+
+
+  }
+
+  .card-details-label-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+
+    .grey-button {
+      margin: 0;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .card-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin: 0;
+  }
+
+  .sep-labels-action-line {
+    border-bottom: 1px solid rgba(9, 30, 66, 0.13);
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+
+  .card-label {
+    // height: 8px;
+    padding: 0 12px;
+    min-width: 48px;
+    border-radius: 0.3em;
+    height: 32px;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    color: black;
+    position: relative;
+    padding-left: 32px;
+
+    .label-filter-title {
+      margin-left: 3em;
+    }
+
+
+    .circle {
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 8px;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      // background-color: complement($color: #ffffff);
+    }
+  }
+
+  .side-bar {
+    grid-area: side-bar;
+    padding-top: 5em;
+  }
+
+  .card-member {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+
+    .member-image {
+      height: em(28px);
+      margin-left: 3px;
+      border-radius: 100%;
+      width: em(28px);
+    }
+
+    button {
+      padding: 0.6em;
+      border-radius: 2em;
+      display: flex;
+      align-items: center;
+
+      background-color: #caccce74;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #caccced5;
+      }
+    }
+  }
+
+  .members-list {
+    .members-list-title {
+      text-align: center;
+      color: $clr7;
+    }
+
+    .sep-line {
+      border-bottom: 1px solid rgba(9, 30, 66, 0.13);
+      width: 100%;
+      margin-bottom: 1em;
+    }
+
+    .members-preview {
+      list-style: none;
+      padding-left: 1em;
+      gap: 0.5em;
+      display: flex;
+      flex-direction: column;
+
+      li {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.2em;
+
+        img {
+          margin-right: 0.5em;
+        }
+      }
+    }
+  }
+
+  .card-description {
+    .desc-textarea {
+      margin-left: 1.7em;
+
+      .card-desc-btns {
+        display: flex;
+        align-items: stretch;
+        gap: 0.3em;
+        padding-bottom: 1em;
+
+        .grey-button {
+          margin: 0;
+        }
+
+        .blue-button {
+          margin: 0;
+        }
+      }
+
+      .card-title-description {
+        width: 100%;
+        height: 75px;
+        padding: 0;
+        border: none;
+        outline: none;
+        background-color: $clr19;
+        box-shadow: 0 1px 0 rgb(9 30 66 / 25%);
+        border-radius: 0.2em;
+        padding-top: 0.5em;
+        background-color: #fff;
+        box-shadow: inset 0 0 0 2px var(--ds-border-focused, #0079bf);
+        font-family: "Open Sans", sans-serif;
+        padding-left: 0.4em;
+      }
+    }
+
+    p {
+      font-family: OpenSans-Regular;
+      background-color: var(--ds-background-neutral, #091e420a);
+      border: none;
+      border-radius: 3px;
+      box-shadow: none;
+      color: var(--ds-text, inherit);
+      display: block;
+      min-height: 60px;
+      padding: 8px 12px;
+      text-decoration: none;
+      margin-left: 2em;
+      font-size: 13px;
+      color: $clr14;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #091e4214;
+      }
+    }
+
+    h3 {
+      font-size: $card-details-header;
+      font-family: $trello-font;
+      display: flex;
+      font-size: 14px;
+      color: $clr7;
+      margin-bottom: 1.2em;
+
+      i {
+        padding-right: 0.7em;
+        font-size: 18px;
+      }
+    }
+
+    .cancel-desc-btn {
+      background: transparent;
+
+      &:hover {
+        background-color: #091e4214;
+        border-radius: 0.2em;
+      }
+    }
+  }
+
+  .checklist-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+
+    .add-cover-header {
+      width: 100%;
+    }
+
+    p {
+      display: flex;
+      align-self: center;
+      color: #5e6c84;
+      justify-content: center;
+    }
+
+
+
+    .sep-line {
+      border-bottom: 1px solid rgba(9, 30, 66, 0.13);
+      width: 100%;
+      margin-bottom: 1em;
+    }
+
+    .blue-button {
+      background-color: #0079bf;
+      border: none;
+      box-shadow: none;
+      color: var(--ds-text-inverse, #fff);
+      padding: 8px;
+      padding-left: 24px;
+      padding-right: 24px;
+      margin: 8px 8px 0 0;
+      font-size: 14px;
+      font-family: "Open Sans", sans-serif;
+      border-radius: 0.2em;
+    }
+
+    label {
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .new-checklist-input {
+      height: 2.5rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      width: 4.5rem;
+    }
+
+
+  }
+
+
+
+  .card-detail-data {
+    padding-left: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5em;
+
+    .members-span {
+      font-size: 12px;
+      font-weight: 600;
+      font-family: $trello-font;
+      color: #5e6c84;
+    }
+  }
+
+  .card-comments {
+    .card-comments-title {
+      display: flex;
+      align-items: flex-end;
+
+      h3 {
+        font-size: $card-details-header;
+        font-family: $trello-font;
+      }
+
+      .comments-icon {
+        padding-right: 0.7em;
+      }
+    }
+
+    .member-image {
+      height: em(28px);
+      border-radius: 25em;
+      width: em(28px);
+    }
+  }
+
+  .card-details-sidebar {
+    .member-image {
+      height: em(28px);
+      border-radius: 25em;
+      width: em(28px);
+    }
+
+    .side-bar-btn {
+      padding: 6px 12px;
+      height: 32px;
+      background-color: #091e420a;
+      margin-top: 8px;
+      text-align: start;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      color: $clr7;
+
+      &:hover {
+        background-color: #091e4214;
+      }
+    }
+  }
+
+  .card-date {
+    display: flex;
+    align-self: flex-end;
+  }
+
+  .card-content {
+    padding: 0px rem(8px) rem(8px) rem(16px);
+    padding: em(20px);
+    grid-area: content;
+
+    // h3 {
+    //   margin: 0;
+    // }
+
+    .card-details-group-title {
+      margin: 0.5em 0 1.8em;
+      font-size: 13px;
+      padding-left: 2.5em;
+      font-family: OpenSans-Regular;
+      color: #5e6c84;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+
+    .card-title {
+      display: flex;
+      font-size: 18px;
+      font-family: $trello-font;
+      letter-spacing: 0.5px;
+      margin: 0;
+
+      .card-title-input {
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        transform: translate(-8px, -4px);
+        height: inherit;
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: #ebecf0;
+        border-radius: 0.2em;
+        background-color: #fff;
+        font-family: "Open Sans", sans-serif;
+        padding-left: 0.5em;
+        box-shadow: inset 0 0 0 2px var(--ds-border-focused, #0079bf);
+      }
+
+      .card-icon-title {
+        padding-right: 0.7em;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .card-comments-title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    h3 {
+      font-size: $card-details-header;
+      font-family: $trello-font;
+    }
+
+    .comments-icon {
+      padding-right: 0.7em;
+    }
+  }
+
+  .activity-btn {
+    margin: 0;
+  }
+
+  .activity-title {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .card-activites {
+    display: flex;
+    flex-direction: column;
+    align-items: fle;
+    gap: 0.5em;
+    color: var(--ds-text, #172b4d);
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+
+  }
+
+  .activitie {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--ds-text, #172b4d);
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    position: relative;
+    left: -1.15%;
+  }
+
+
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .activitie-time {
+    font-size: 12px;
+    color: #5e6c84
+  }
+
+  .card-activites {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+    color: var(--ds-text, #172b4d);
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 0;
+    background-color: inherit;
+    position: relative;
+
+
+  }
+
+
+}
